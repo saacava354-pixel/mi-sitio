@@ -1,0 +1,59 @@
+        :root {
+            --rosa-pastel: #fce4ec;
+            --rosa-fuerte: #f06292;
+            --rosa-hover: #ec407a;
+            --blanco: #ffffff;
+        }
+
+        body { font-family: 'Poppins', sans-serif; background-color: var(--blanco); color: #fce4ec; }
+        h1, h2, h3, .navbar-brand { font-family: 'Playfair Display', serif; color: var(--rosa-fuerte); }
+
+        /* Navbar personalizada */
+        .navbar { background-color: var(--blanco); border-bottom: 2px solid var(--rosa-pastel); }
+        .nav-link { color:#ec407a;; transition: 0.3s; }
+        .nav-link:hover { color: var(--rosa-pastel) ; }
+
+        .page-header {
+            background-color: var(--rosa-pastel);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .service-card {
+            border: none;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+        .service-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 15px 30px rgba(240, 98, 146, 0.2);
+        }
+        .service-img {
+            height: 250px;
+            object-fit: cover;
+        }
+        .price-tag {
+            color: var(--rosa-fuerte);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .btn-beauty { 
+            background-color: var(--rosa-fuerte); 
+            color: white; 
+            border-radius: 50px; 
+            padding: 10px 25px; 
+            border: none;
+            font-weight: 600;
+        }
+        .btn-beauty:hover { background-color: var(--rosa-hover); color: white; }
+
+        .footer-professional {
+            background-color: var(--rosa-pastel);
+            color: #555;
+            border-top: 5px solid var(--rosa-fuerte);
+        }
+        .footer-link { color: #555; text-decoration: none; }
+        .footer-link:hover { color: var(--rosa-fuerte); }
