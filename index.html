@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow Cosmetics | Beauty Store</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <style>
+        :root {
+            --rosa-pastel: #fce4ec;
+            --rosa-fuerte: #f06292;
+            --rosa-hover: #ec407a;
+            --blanco: #ffffff;
+        }
+
+        body { font-family: 'Poppins', sans-serif; background-color: var(--blanco); color: #fce4ec; }
+        h1, h2, h3, .navbar-brand { font-family: 'Playfair Display', serif; color: var(--rosa-fuerte); }
+
+        /* Navbar personalizada */
+        .navbar { background-color: var(--blanco); border-bottom: 2px solid var(--rosa-pastel); }
+        .nav-link { color:#fce4ec !important; transition: 0.3s; }
+        .nav-link:hover { color: var(--rosa-fuerte) !important; }
+
+        /* Contenedor de Video Hero */
+        .hero-video-container {
+            position: relative;
+            width: 100%;
+            height: 60vh;
+            background-color: #000; 
+            overflow: hidden;
+        }
+        
+        .hero-video-container video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(255, 240, 245, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .btn-beauty { 
+            background-color: var(--rosa-fuerte); 
+            color: white; 
+            border-radius: 50px; 
+            padding: 12px 35px; 
+            border: none;
+            font-weight: 600;
+        }
+        .btn-beauty:hover { background-color: var(--rosa-hover); color: white; transform: scale(1.05); transition: 0.3s; }
+
+        .product-info-card {
+            border: none;
+            background-color: var(--rosa-pastel);
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+        .product-info-card:hover { transform: translateY(-10px); }
+        .icon-box {
+            font-size: 2.5rem;
+            color: var(--rosa-fuerte);
+            margin-bottom: 15px;
+        }
+
+        .footer-professional {
+            background-color: var(--rosa-pastel);
+            color: #555;
+            border-top: 5px solid var(--rosa-fuerte);
+        }
+        .footer-link { color: #555; text-decoration: none; }
+        .footer-link:hover { color: var(--rosa-fuerte); }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-2" href="#">Glow<span style="color: var(--rosa-fuerte);">Cosmetics</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fw-semibold">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="quienessomos.html">Quiénes Somos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog / Noticias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-video-container" col-md-4>
+        <video autoplay muted loop playsinline poster="https://via.placeholder.com/1920x1080/fce4ec/f06292?text=Cargando+Belleza...">
+            <source src="Imagenes/organizador.mp4" type="video/mp4">
+            Tu navegador no soporta videos.
+        </video>
+        <div class="video-overlay">
+            <div class="container">
+                <h1 class="display-2 fw-bold mb-3">Tu Rostro, Nuestra Obra</h1>
+                <p class="fs-4 mb-4 text-dark">Descubre la colección de primavera inspirada en tonos pastel.</p>
+                <button class="btn btn-beauty shadow">Explorar Tienda</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-5 bg-white">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Esenciales de Maquillaje</h2>
+                <p class="text-muted">Calidad premium para resultados profesionales en casa.</p>
+            </div>
+            
+            <div class="row g-4 text-center">
+                <div class="col-md-4">
+                    <div class="card product-info-card h-100 p-4">
+                        <div class="icon-box"><i class="bi bi-stars"></i></div>
+                        <h3>Piel Radiante</h3>
+                        <p>Bases con ácido hialurónico que hidratan y unifican el tono sin obstruir los poros.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card product-info-card h-100 p-4">
+                        <div class="icon-box"><i class="bi bi-eye-fill"></i></div>
+                        <h3>Mirada Intensa</h3>
+                        <p>Sombras de alta pigmentación y máscaras resistentes al agua para todo el día.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card product-info-card h-100 p-4">
+                        <div class="icon-box"><i class="bi bi-heart-fill"></i></div>
+                        <h3>Labios Velvet</h3>
+                        <p>Labiales mate y gloss enriquecidos con vitamina E para una suavidad extrema.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-professional pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h4 class="fw-bold mb-4">Glow Cosmetics</h4>
+                    <p>Somos apasionados por la belleza ética y sostenible. Todos nuestros productos son 100% libres de crueldad animal.</p>
+                    <div class="fs-4">
+                        <a href="#" class="me-3 text-dark"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="me-3 text-dark"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-dark"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 ms-auto">
+                    <h5 class="fw-bold mb-3">Enlaces</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="footer-link">Nuevos Productos</a></li>
+                        <li><a href="#" class="footer-link">Guía de Tonos</a></li>
+                        <li><a href="#" class="footer-link">Preguntas Frecuentes</a></li>
+                        <li><a href="#" class="footer-link">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">Suscríbete al Newsletter</h5>
+                    <p>Recibe ofertas exclusivas y tips de maquillaje.</p>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control border-0" placeholder="Tu email aquí">
+                        <button class="btn btn-beauty" type="button">Unirme</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4" style="background-color: var(--rosa-fuerte);">
+            <div class="text-center">
+                <p class="small mb-0">&copy; 2026 Glow Cosmetics | Creado con ❤️para amantes del maquillaje.</p>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>    
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
